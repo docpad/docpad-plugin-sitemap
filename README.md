@@ -34,8 +34,11 @@ cachetime: 600000 # Defaults to 600000 ms = 600 seconds = 5 minutes
 
 ## Roadmap before considered usable
 
-- Figure out how to distinguish documents from other files (layouts, assets etc.)
-- Figure out how to write file to disc properly
+It's a work in progress for now. It has several problems, and will be considered usable when these issues are fixed :
+
+- Figure out how to distinguish documents from other files (layouts, assets etc.) - [issue #1](https://github.com/DjebbZ/docpad-plugin-sitemap/issues/1)
+- Figure out how to write file to disc properly - [issue #2](https://github.com/DjebbZ/docpad-plugin-sitemap/issues/2)
+- Figure out how to use docpad.cson option - [issue #3](https://github.com/DjebbZ/docpad-plugin-sitemap/issues/3)
 - Write tests and make sure the sitemap.xml file is valid
 
 
