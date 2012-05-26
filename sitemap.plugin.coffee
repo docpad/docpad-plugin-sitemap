@@ -90,7 +90,7 @@ module.exports = (BasePlugin) ->
       # Only HTML documents are of interest for a sitemap
       # todo: figure out how to reliably differenciate between document from other files (layouts, assets etc.)
       if extension in ['html']
-        # Merge document's data and default values
+        # Merge document's sitemap data and default values into document's metadata
         templateData = _.extend templateData, config.defaultsPerDoc, templateData
 
         # Create document's data
@@ -115,11 +115,11 @@ module.exports = (BasePlugin) ->
       logger = @docpad.logger
       sitemap = @sitemap
 
+      logger.log "debug", JSON.stringify sitemap, null, 4
+
       # Create the sitemap.xml file if it doesn't exist
       # todo: figure out what mode to use
-      fd = fs.openSync config.sitemapPath, 'w+', 664
-
-      logger.log "debug", JSON.stringify sitemap, null, 4
+#      fs.openSync config.sitemapPath, 'w+', 0664
 
       # Create a sitemap.js object
       sitemap = sm.createSitemap(sitemap);
@@ -133,9 +133,9 @@ module.exports = (BasePlugin) ->
 
         # Ensure proper files permissions
         # todo: figure out what mode to use, and why previous permission are not kept
-        fs.chmodSync config.sitemapPath, 664
+#        fs.chmodSync config.sitemapPath, 664
 
         logger.log 'debug', "Wrote the rendered file: #{config.sitemapPath}"
 
-      # Done, let DocPad proceed
-      next?()
+        # Done, let DocPad proceed
+        next?()
