@@ -29,7 +29,7 @@ module.exports = (BasePlugin) ->
       # the following defaults are for the whole sitemap.xml file
       defaultsGlobal:
         hostname: "http://example.com" # Obviously need to be changed
-        cachetime: 600 # 600 seconds cache period
+        cachetime: 600000 # 600 seconds cache period
       # the following defaults are per-document
       defaultsPerDoc:
         changefreq: 'weekly'
