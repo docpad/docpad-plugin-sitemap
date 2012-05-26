@@ -1,0 +1,38 @@
+{
+	"name": "docpad-plugin-sitemap",
+	"version": "0.1.0",
+	"description": "DocPad plugin which automatically create a sitemap.xml file.",
+	"homepage": "https://github.com/DjebbZ/docpad-plugin-sitemap",
+	"keywords": [
+		"docpad",
+		"docpad-plugin",
+		"SEO",
+    "Search Engine Optimization",
+		"sitemap",
+    "sitemap.xml"
+	],
+	"author": "Khalid Jebbari <khalid.jebbari> (http://twitter.com/#!/dj3bbz)",
+	"maintainers": [
+		"Khalid Jebbari <khalid.jebbari> (http://twitter.com/#!/dj3bbz)"
+	],
+	"contributors": [
+		"Khalid Jebbari <khalid.jebbari> (http://twitter.com/#!/dj3bbz)"
+	],
+	"bugs": {
+		"url": "https://github.com/DjebbZ/docpad-plugin-sitemap/issues"
+	},
+	"repository" : {
+		"type": "git",
+		"url": "https://github.com/DjebbZ/docpad-plugin-sitemap.git"
+	},
+	"engines" : {
+		"node": ">=0.4.0",
+		"docpad": "5.x"
+	},
+  "dependencies" : {
+    "sitemap": "0.6.x",
+    "underscore": "1.x",
+    "bal-util": "1.6.x"
+  },
+	"main": "./sitemap.plugin.coffee"
+}
