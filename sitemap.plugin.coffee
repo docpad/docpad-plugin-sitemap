@@ -52,32 +52,32 @@ module.exports = (BasePlugin) ->
 
 
     # --------------
-    # Helpers
-
-    # Create a document sitemap data
-    createDocMap: (config,templateData,file) ->
-      # Prepare
-      logger = @docpad.logger
-
-
-
-      # Return
-      docMap
-
-    # --------------
     # Docpad events
 
-    # Create the sitemap.xml site-wide data at the very beginning
+    # Create the sitemap.xml site-wide data at the very beginning,
+    # so that DocPad copies it to the `out` directory
     generateBefore: ({}, next) ->
       # Prepare
       config = @config
       sitemap = @sitemap
+      logger = @docpad.logger
 
-      # Creates the site-wide sitemap data
-      _.extend sitemap, config.defaultsGlobal
+      if path.existsSync config.sitemapPath
+        logger.log "debug", "The sitemap.xml file already exists"
 
-      # Done, let DocPad proceed
-      next?()
+        # Done, let DocPad proceed
+        next?()
+      else
+        logger.log "debug", "Creating the sitemap.xml file..."
+        balUtil.writeFile config.sitemapPath, '', (err) ->
+          return next?(err) if err
+          logger.log "debug", "Created the sitemap.xml file."
+
+          # Creates the site-wide sitemap data
+          _.extend sitemap, config.defaultsGlobal
+
+          # Done, let DocPad proceed
+          next?()
 
     # Populate the sitemap.xml data for each document
     renderDocument: (opts, next) ->
@@ -99,7 +99,7 @@ module.exports = (BasePlugin) ->
           changefreq: templateData.changefreq
           priority: templateData.priority
 
-        logger.log "debug", "sitemap.xml docMap => url: #{docMap.url} - changefreq: #{docMap.changefreq} - priority: #{docMap.priority}"
+        logger.log "debug", "sitemap.xml data => url: #{docMap.url} - changefreq: #{docMap.changefreq} - priority: #{docMap.priority}"
 
         # Add document data to site-wide map
         sitemap.urls.push docMap
@@ -108,34 +108,25 @@ module.exports = (BasePlugin) ->
       next?()
 
     # Write the sitemap.xml file in 'src/public' before DocPad moves it to 'out'
-    # todo: figure out if the writing should be done sync or async
     writeBefore: ({}, next) ->
       # Prepare
       config = @config
       logger = @docpad.logger
       sitemap = @sitemap
 
-      logger.log "debug", JSON.stringify sitemap, null, 4
-
-      # Create the sitemap.xml file if it doesn't exist
-      # todo: figure out what mode to use
-#      fs.openSync config.sitemapPath, 'w+', 0664
+      logger.log "debug", "Sitemap data :\n#{JSON.stringify sitemap, null, 4}"
 
       # Create a sitemap.js object
       sitemap = sm.createSitemap(sitemap);
 
-      logger.log "debug", sitemap.toString()
+      logger.log "debug", "sitemap.xml file content :\n#{sitemap.toString()}"
 
       # Fill the sitemap.xml file with data
       balUtil.writeFile config.sitemapPath, sitemap.toString(), (err) ->
         # Check
         return next?(err)  if err
 
-        # Ensure proper files permissions
-        # todo: figure out what mode to use, and why previous permission are not kept
-#        fs.chmodSync config.sitemapPath, 664
-
-        logger.log 'debug', "Wrote the rendered file: #{config.sitemapPath}"
+        logger.log 'debug', "Wrote the sitemap.xml file to: #{config.sitemapPath}"
 
         # Done, let DocPad proceed
         next?()
