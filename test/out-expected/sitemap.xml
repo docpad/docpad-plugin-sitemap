@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url> <loc>http://www.change-me.com/changefreq.html</loc> <changefreq>monthly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://www.change-me.com/defaults.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://www.change-me.com/eco-test.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://www.change-me.com/high-priority.html</loc> <changefreq>weekly</changefreq> <priority>1</priority> </url>
+</urlset>

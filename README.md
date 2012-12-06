@@ -2,54 +2,41 @@
 
 This DocPad plugin will automatically generate a valid `sitemap.xml` file for search engines. It's merely a wrapper for the [sitemap.js](https://github.com/ekalinin/sitemap.js) library.
 
+This project was forked from the solid start made by [Khalid Jebbari](https://github.com/DjebbZ/docpad-plugin-sitemap).
+
 To learn more about sitemap.xml files, read [the protocol](http://www.sitemaps.org/).
 
 ## Installation
 
-For now manually copy `package.json` and `sitemap.plugin.coffee` into `yoursite/node_modules/docpad-plugin-sitemap`.
-
-To be published on npm soon.
+npm install --save docpad-plugin-sitemap
 
 ## Dependencies
 
-- [underscore](http://documentcloud.github.com/underscore/). Comes with DocPad.
-- [bal-util](https://github.com/balupton/bal-util/). Comes with DocPad.
+- [bal-util](https://github.com/balupton/bal-util/)
 - [sitemap.js](https://github.com/ekalinin/sitemap.js)
 
 ## Usage
 
-For each document, you can specify those metadata :
+For each document, you can specify the following metadata :
 
 ``` coffee
 changfreq: 'always' || 'hourly' || 'daily' || 'weekly' || 'monthly' || 'yearly' || 'never' # Change frequency, defaults to 'weekly'
 priority: 0.5 # value between 0.0 and 1.0, defaults to 0.5
+sitemap: true || false # defaults to true, if false no entry for this document will be generated
 ```
 
-For the whole site you'll be able to specify thanks to the docpad.cson file :
+For the whole site you can set defaults using the plugin configuration in your docpad.cson or docpad.coffee file.
 
 ``` coffee
-hostname: 'http://example.com' # Base url of the website, should be changed
-cachetime: 600000 # Defaults to 600000 ms = 600 seconds = 5 minutes
+	plugins:
+		sitemap:
+			cachetime: 600000
+			changefreq: 'weekly'
+			priority: 0.5
 ```
 
-## Roadmap before considered usable
-
-It's a work in progress for now. It has several problems, and will be considered usable when these issues are fixed :
-
-- Figure out how to distinguish documents from other files (layouts, assets etc.) - [issue #1](https://github.com/DjebbZ/docpad-plugin-sitemap/issues/1)
-- Figure out how to write file to disc properly - [issue #2](https://github.com/DjebbZ/docpad-plugin-sitemap/issues/2)
-- Figure out how to use docpad.cson option - [issue #3](https://github.com/DjebbZ/docpad-plugin-sitemap/issues/3)
-- Write tests and make sure the sitemap.xml file is valid
-
+Site URL is read from the `templateData.site.url` property also in that same config file, but will fallback to the `hostname` property in the plugin config if not found.
 
 ## License
-
-The MIT License (MIT)
-
-Copyright (c) 2012 Khalid Jebbari.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Licensed under the incredibly [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT License](http://creativecommons.org/licenses/MIT/)
+<br/>Copyright &copy; 2012 [Ben Delarre](http://delarre.net)
