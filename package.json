@@ -32,7 +32,8 @@
 	},
 	"dependencies" : {
 		"sitemap": "0.6.x",
-        "bal-util": ">=1.13.10 <1.14"
+        	"bal-util": ">=1.13.10 <1.14",
+		"underscore": "~1.4.4"
 	},
     "devDependencies": {
         "coffee-script": "1.4.x"
