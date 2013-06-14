@@ -50,7 +50,6 @@ module.exports = (BasePlugin) ->
 			# create sitemap data object
 			sitemapData = balUtil.extend sitemap, defaultConfig
 			sitemapData = balUtil.extend sitemapData, config
-			docpad.log "debug", sitemapData
 			# set hostename from site url in document
 			siteUrl = templateData.site.url
 			sitemapData.hostname = siteUrl ? sitemapData.hostname
