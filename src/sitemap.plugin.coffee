@@ -22,12 +22,11 @@ module.exports = (BasePlugin) ->
 		# Configuration values
 
 		# default values
-		config:
-			defaults:
-				cachetime: 10*60*1000 # 10 minute cache period
-				changefreq: 'weekly'
-				priority: 0.5
-				hostname: 'http://www.change-me.com'
+		defaultConfig:
+			cachetime: 10*60*1000 # 10 minute cache period
+			changefreq: 'weekly'
+			priority: 0.5
+			hostname: 'http://www.change-me.com'
 
 		# The sitemap being built, to be passed to sitemap.js
 		sitemap:
@@ -43,15 +42,17 @@ module.exports = (BasePlugin) ->
 
 		writeAfter: (opts,next) ->
 			docpad = @docpad
+			defaultConfig = @defaultConfig
 			config = @config
 			sitemap = @sitemap
 			templateData = docpad.getTemplateData()
 
-			siteUrl = templateData.site.url
-
 			# create sitemap data object
-			sitemapData = balUtil.extend sitemap, config.defaults
-			# set hostename from site url in global config
+			sitemapData = balUtil.extend sitemap, defaultConfig
+			sitemapData = balUtil.extend sitemapData, config
+			docpad.log "debug", sitemapData
+			# set hostename from site url in document
+			siteUrl = templateData.site.url
 			sitemapData.hostname = siteUrl ? sitemapData.hostname
 			# use global outPath for sitemap path
 			sitemapPath = docpad.getConfig().outPath+'/sitemap.xml'
@@ -60,13 +61,14 @@ module.exports = (BasePlugin) ->
 
 			# loop over just the html files in the resulting collection
 			docpad.getCollection('html').sortCollection(date:9).forEach (document) ->
-				if document.get('sitemap') isnt false and document.get('write') isnt false and document.get('ignored') isnt true and document.get('body')
+				if (document.get('sitemap') is null or document.get('sitemap') isnt false) and (document.get('write') is null or document.get('write') isnt false) and document.get('ignored') isnt true
 					# create document's sitemap data
 					data =
 						url: document.get('url')
-						changefreq: document.get('changefreq') ? config.defaults.changefreq
-						priority: document.get('priority') ? config.defaults.priority
+						changefreq: document.get('changefreq') ? defaultConfig.changefreq
+						priority: document.get('priority') ? defaultConfig.priority
 
+					docpad.log "debug", data
 					sitemapData.urls.push data
 
 			# setup sitemap with our data
