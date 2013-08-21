@@ -1,30 +1,30 @@
 {
 	"name": "docpad-plugin-sitemap",
-	"version": "0.2.0",
+	"version": "2.0.0",
 	"description": "DocPad plugin which automatically creates a sitemap.xml file from HTML file output.",
-	"homepage": "https://github.com/benjamind/docpad-plugin-sitemap",
+	"homepage": "https://github.com/docpad/docpad-plugin-sitemap",
 	"keywords": [
 		"docpad",
 		"docpad-plugin",
 		"SEO",
-   		"Search Engine Optimization",
+		"Search Engine Optimization",
 		"sitemap",
-    	"sitemap.xml"
+		"sitemap.xml"
 	],
 	"author": "Ben Delarre <ben@delarre.net> (http://www.delarre.net)",
 	"maintainers": [
-        "Ben Delarre <ben@delarre.net> (http://www.delarre.net)"
+		"Ben Delarre <ben@delarre.net> (http://www.delarre.net)"
 	],
 	"contributors": [
-		"Khalid Jebbari <khalid.jebbari> (http://twitter.com/#!/dj3bbz)",
-        "Ben Delarre <ben@delarre.net> (http://www.delarre.net)"
+		"Khalid Jebbari <khalid.jebbari> (https://twitter.com/dj3bbz)",
+		"Ben Delarre <ben@delarre.net> (http://www.delarre.net)"
 	],
 	"bugs": {
-		"url": "https://github.com/benjamind/docpad-plugin-sitemap/issues"
+		"url": "https://github.com/docpad/docpad-plugin-sitemap/issues"
 	},
 	"repository" : {
 		"type": "git",
-		"url": "https://github.com/benjamind/docpad-plugin-sitemap.git"
+		"url": "https://github.com/docpad/docpad-plugin-sitemap.git"
 	},
 	"engines" : {
 		"node": ">=0.4.0",
@@ -32,14 +32,14 @@
 	},
 	"dependencies" : {
 		"sitemap": "0.6.x",
-        	"bal-util": ">=1.13.10 <1.14",
+		"bal-util": ">=1.13.10 <1.14",
 		"underscore": "~1.4.4"
 	},
-    "devDependencies": {
-        "coffee-script": "1.4.x"
-    },
+	"devDependencies": {
+		"coffee-script": "1.4.x"
+	},
 	"main": "./out/sitemap.plugin.js",
-    "scripts": {
-        "test": "node ./test/sitemap.test.js"
-    }
+	"scripts": {
+		"test": "node ./test/sitemap.test.js"
+	}
 }
