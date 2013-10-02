@@ -1,45 +1,50 @@
 {
-	"name": "docpad-plugin-sitemap",
-	"version": "2.0.0",
-	"description": "DocPad plugin which automatically creates a sitemap.xml file from HTML file output.",
-	"homepage": "https://github.com/docpad/docpad-plugin-sitemap",
-	"keywords": [
-		"docpad",
-		"docpad-plugin",
-		"SEO",
-		"Search Engine Optimization",
-		"sitemap",
-		"sitemap.xml"
-	],
-	"author": "Ben Delarre <ben@delarre.net> (http://www.delarre.net)",
-	"maintainers": [
-		"Ben Delarre <ben@delarre.net> (http://www.delarre.net)"
-	],
-	"contributors": [
-		"Khalid Jebbari <khalid.jebbari> (https://twitter.com/dj3bbz)",
-		"Ben Delarre <ben@delarre.net> (http://www.delarre.net)"
-	],
-	"bugs": {
-		"url": "https://github.com/docpad/docpad-plugin-sitemap/issues"
-	},
-	"repository" : {
-		"type": "git",
-		"url": "https://github.com/docpad/docpad-plugin-sitemap.git"
-	},
-	"engines" : {
-		"node": ">=0.4.0",
-		"docpad": "6.x"
-	},
-	"dependencies" : {
-		"sitemap": "0.6.x",
-		"bal-util": ">=1.13.10 <1.14",
-		"underscore": "~1.4.4"
-	},
-	"devDependencies": {
-		"coffee-script": "1.4.x"
-	},
-	"main": "./out/sitemap.plugin.js",
-	"scripts": {
-		"test": "node ./test/sitemap.test.js"
-	}
+  "name": "docpad-plugin-sitemap",
+  "version": "2.0.1",
+  "description": "DocPad plugin which automatically creates a sitemap.xml file from HTML file output.",
+  "homepage": "https://github.com/docpad/docpad-plugin-sitemap",
+  "keywords": [
+    "docpad",
+    "docpad-plugin",
+    "SEO",
+    "Search Engine Optimization",
+    "sitemap",
+    "sitemap.xml"
+  ],
+  "author": "Ben Delarre <ben@delarre.net> (http://www.delarre.net)",
+  "maintainers": [
+    "Ben Delarre <ben@delarre.net> (http://www.delarre.net)",
+    "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
+  ],
+  "contributors": [
+    "Khalid Jebbari <khalid.jebbari@gmail.com> (https://github.com/DjebbZ)",
+    "Ben Delarre <ben@delarre.net> (https://github.com/benjamind)",
+    "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)",
+    "Bruno Heridet (https://github.com/Delapouite)"
+  ],
+  "bugs": {
+    "url": "https://github.com/docpad/docpad-plugin-sitemap/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/docpad/docpad-plugin-sitemap.git"
+  },
+  "engines": {
+    "node": ">=0.4.0"
+  },
+  "peerDependencies": {
+    "docpad": "6"
+  },
+  "dependencies": {
+    "extendr": "~2.1.0",
+    "safefs": "~3.0.3",
+    "sitemap": "~0.6.0"
+  },
+  "devDependencies": {
+    "coffee-script": "1.6.3"
+  },
+  "main": "./out/sitemap.plugin.js",
+  "scripts": {
+    "test": "node ./out/sitemap.test.js"
+  }
 }

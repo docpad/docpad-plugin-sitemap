@@ -1,16 +1,8 @@
 # Export Plugin
 module.exports = (BasePlugin) ->
 	# Requires
-	# Node modules
-	path = require('path')
-	fs = require('fs')
-	url = require('url')
-	util = require('util')
-
-	# DocPad
-	balUtil = require('bal-util')
-
-	# External
+	extendr = require('extendr')
+	safefs = require('safefs')
 	sm = require('sitemap')
 
 	# Define Plugin
@@ -48,8 +40,8 @@ module.exports = (BasePlugin) ->
 			templateData = docpad.getTemplateData()
 
 			# create sitemap data object
-			sitemapData = balUtil.extend sitemap, defaultConfig
-			sitemapData = balUtil.extend sitemapData, config
+			sitemapData = extendr.extend sitemap, defaultConfig
+			sitemapData = extendr.extend sitemapData, config
 			# set hostename from site url in document
 			siteUrl = templateData.site.url
 			sitemapData.hostname = siteUrl ? sitemapData.hostname
@@ -74,7 +66,7 @@ module.exports = (BasePlugin) ->
 			sitemap = sm.createSitemap(sitemapData);
 
 			# write the sitemap to file
-			balUtil.writeFile sitemapPath, sitemap.toString(), (err) ->
+			safefs.writeFile sitemapPath, sitemap.toString(), (err) ->
 				# bail on error? Should really do something here
 				return next?(err)  if err
 

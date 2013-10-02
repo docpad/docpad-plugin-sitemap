@@ -1,4 +1,7 @@
-# DocPad Sitemap Plugin
+# Sitemap Plugin for [DocPad](http://docpad.org)
+
+[![Build Status](https://secure.travis-ci.org/docpad/docpad-plugin-sitemap.png?branch=master)](http://travis-ci.org/docpad/docpad-plugin-sitemap "Check this project's build status on TravisCI")
+[![NPM version](https://badge.fury.io/js/docpad-plugin-sitemap.png)](https://npmjs.org/package/docpad-plugin-sitemap "View this project on NPM")
 
 This DocPad plugin will automatically generate a valid `sitemap.xml` file for search engines. It's merely a wrapper for the [sitemap.js](https://github.com/ekalinin/sitemap.js) library.
 
@@ -6,17 +9,15 @@ This project was forked from the solid start made by [Khalid Jebbari](https://gi
 
 To learn more about sitemap.xml files, read [the protocol](http://www.sitemaps.org/).
 
+
 ## Installation
 
-npm install --save docpad-plugin-sitemap
+``` bash
+docpad install sitemap
+```
 
-## Dependencies
-
-- [bal-util](https://github.com/balupton/bal-util/)
-- [sitemap.js](https://github.com/ekalinin/sitemap.js)
 
 ## Usage
-
 For each document, you can specify the following metadata :
 
 ``` coffee
@@ -37,6 +38,7 @@ For the whole site you can set defaults using the plugin configuration in your d
 
 Site URL is read from the `templateData.site.url` property also in that same config file, but will fallback to the `hostname` property in the plugin config if not found.
 
+
 ## License
 Licensed under the incredibly [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT License](http://creativecommons.org/licenses/MIT/)
-<br/>Copyright &copy; 2012 [Ben Delarre](http://delarre.net)
+<br/>Copyright &copy; 2012+ [Ben Delarre](http://delarre.net)
