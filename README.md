@@ -29,15 +29,22 @@ sitemap: true || false # defaults to true, if false no entry for this document w
 For the whole site you can set defaults using the plugin configuration in your docpad.cson or docpad.coffee file.
 
 ``` coffee
-	plugins:
-		sitemap:
-			cachetime: 600000
-			changefreq: 'weekly'
-			priority: 0.5
+  plugins:
+    sitemap:
+      cachetime: 600000
+      changefreq: 'weekly'
+      priority: 0.5
 ```
 
 Site URL is read from the `templateData.site.url` property also in that same config file, but will fallback to the `hostname` property in the plugin config if not found.
 
+By default all HTML files on your site will be considered for inclusion. To specify a different collection, add to your Docpad configuration file:
+
+``` coffee
+  plugins:
+    sitemap:
+      collection: 'myCollection'
+```
 
 ## License
 Licensed under the incredibly [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT License](http://creativecommons.org/licenses/MIT/)

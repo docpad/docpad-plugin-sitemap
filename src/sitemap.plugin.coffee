@@ -49,9 +49,11 @@ module.exports = (BasePlugin) ->
 			sitemapPath = docpad.getConfig().outPath+'/sitemap.xml'
 
 			docpad.log('debug', 'Creating sitemap in ' + sitemapPath)
-
-			# loop over just the html files in the resulting collection
-			docpad.getCollection('html').sortCollection(date:9).forEach (document) ->
+			
+			# allow a configured collection or just use all html files
+			collection = config.collection ? 'html'
+			# loop over just the files in the resulting collection
+			docpad.getCollection(collection).sortCollection(date:9).forEach (document) ->
 				if (document.get('sitemap') is null or document.get('sitemap') isnt false) and (document.get('write') is null or document.get('write') isnt false) and document.get('ignored') isnt true
 					# create document's sitemap data
 					data =
