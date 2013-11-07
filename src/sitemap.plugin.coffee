@@ -19,6 +19,7 @@ module.exports = (BasePlugin) ->
 			changefreq: 'weekly'
 			priority: 0.5
 			hostname: 'http://www.change-me.com'
+			file: '/sitemap.xml'
 
 		# The sitemap being built, to be passed to sitemap.js
 		sitemap:
@@ -46,7 +47,7 @@ module.exports = (BasePlugin) ->
 			siteUrl = templateData.site.url
 			sitemapData.hostname = siteUrl ? sitemapData.hostname
 			# use global outPath for sitemap path
-			sitemapPath = docpad.getConfig().outPath+'/sitemap.xml'
+			sitemapPath = docpad.getConfig().outPath+sitemapData.file
 
 			docpad.log('debug', 'Creating sitemap in ' + sitemapPath)
 
