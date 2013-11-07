@@ -3,7 +3,6 @@ Makefile
 Cakefile
 History.md
 
-src/
 out/*.tester.*
 out/*.test.*
 out/test/
