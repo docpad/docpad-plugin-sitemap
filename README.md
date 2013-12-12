@@ -26,6 +26,7 @@ docpad install sitemap
 
 
 ## Usage
+
 For each document, you can specify the following metadata :
 
 ``` coffee
@@ -37,14 +38,17 @@ sitemap: true || false # defaults to true, if false no entry for this document w
 For the whole site you can set defaults using the plugin configuration in your docpad.cson or docpad.coffee file.
 
 ``` coffee
+	templateData:
+		site:
+			url: "http://your-website-production-url.com"  # required for sitemap
+	
 	plugins:
 		sitemap:
 			cachetime: 600000
 			changefreq: 'weekly'
 			priority: 0.5
+			filePath: 'sitemap.xml'
 ```
-
-Site URL is read from the `templateData.site.url` property also in that same config file, but will fallback to the `hostname` property in the plugin config if not found.
 
 
 <!-- HISTORY/ -->

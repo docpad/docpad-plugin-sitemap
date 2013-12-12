@@ -1,4 +1,11 @@
-## History
+# History
+
+- v2.1.0 December 13, 2012
+	- Will now error if `templateData.site.url` is not defined
+	- Added the ability to customise the sitemap location via the `filePath` plugin configuration option
+		- Thanks to [Nathan Bowser](https://github.com/nathanbowser) for [pull request #6](https://github.com/docpad/docpad-plugin-sitemap/pull/6)
+	- Updated dependencies
+	- Repackaged
 
 - v2.0.1 October 2, 2012
 	- Updated dependencies

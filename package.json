@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-sitemap",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "DocPad plugin which automatically creates a sitemap.xml file from HTML file output.",
   "homepage": "https://github.com/docpad/docpad-plugin-sitemap",
   "license": {
@@ -49,7 +49,7 @@
   "dependencies": {
     "extendr": "~2.1.0",
     "safefs": "~3.0.3",
-    "sitemap": "~0.6.0"
+    "sitemap": "~0.7.1"
   },
   "devDependencies": {
     "docpad": "6",
