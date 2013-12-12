@@ -2,6 +2,7 @@
 module.exports = (BasePlugin) ->
 	# Requires
 	extendr = require('extendr')
+	pathUtil = require('path')
 	safefs = require('safefs')
 	sm = require('sitemap')
 
@@ -10,21 +11,14 @@ module.exports = (BasePlugin) ->
 		# Plugin name
 		name: 'sitemap'
 
-		# --------------
-		# Configuration values
-
-		# default values
-		defaultConfig:
+		# Plugin configuration
+		config:
 			cachetime: 10*60*1000 # 10 minute cache period
 			changefreq: 'weekly'
 			priority: 0.5
-			hostname: 'http://www.change-me.com'
+			filePath: 'sitemap.xml'
+			collectionName: 'html'
 
-		# The sitemap being built, to be passed to sitemap.js
-		sitemap:
-			hostname: null
-			cachetime: null
-			urls: []
 
 		# --------------
 		# Docpad events
@@ -34,27 +28,31 @@ module.exports = (BasePlugin) ->
 
 		writeAfter: (opts,next) ->
 			docpad = @docpad
-			defaultConfig = @defaultConfig
-			config = @config
-			sitemap = @sitemap
 			templateData = docpad.getTemplateData()
+			docpadConfig = docpad.getConfig()
 
 			# create sitemap data object
-			sitemapData = extendr.extend sitemap, defaultConfig
-			sitemapData = extendr.extend sitemapData, config
-			# set hostename from site url in document
-			siteUrl = templateData.site.url
-			sitemapData.hostname = siteUrl ? sitemapData.hostname
-			# use global outPath for sitemap path
-			sitemapPath = docpad.getConfig().outPath+'/sitemap.xml'
+			sitemapData = extendr.extend({
+				hostname: templateData.site.url
+				cachetime: null
+				urls: []
+			}, @getConfig())
 
+			# Error if we have no site url
+			unless sitemapData.hostname
+				err = new Error('You must specify templateData.site.url in your docpad configuration file')
+				return next(err)
+
+			# use global outPath for sitemap path
+			sitemapPath = pathUtil.resolve(docpadConfig.outPath, sitemapData.filePath)
+
+			# log
 			docpad.log('debug', 'Creating sitemap in ' + sitemapPath)
-			
-			# allow a configured collection or just use all html files
-			collection = config.collection ? 'html'
-			# loop over just the files in the resulting collection
-			docpad.getCollection(collection).sortCollection(date:9).forEach (document) ->
-				if (document.get('sitemap') is null or document.get('sitemap') isnt false) and (document.get('write') is null or document.get('write') isnt false) and document.get('ignored') isnt true
+
+			# loop over just the html files in the resulting collection
+			docpad.getCollection(sitemapData.collectionName).sortCollection(date:1).forEach (document) ->
+				if (document.get('sitemap') isnt false) and (document.get('write') isnt false) and (document.get('ignored') isnt true)
+
 					# create document's sitemap data
 					data =
 						url: document.get('url')
@@ -72,7 +70,11 @@ module.exports = (BasePlugin) ->
 				# bail on error? Should really do something here
 				return next?(err)  if err
 
-				docpad.log('debug', "Wrote the sitemap.xml file to: #{sitemapPath}")
+				# log
+				docpad.log('debug', "Wrote the #{sitemapData.filePath} file to: #{sitemapPath}")
 
 				# Done, let DocPad proceed
-				next?()
+				return next()
+
+			# Chain
+			@

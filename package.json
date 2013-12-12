@@ -1,8 +1,18 @@
 {
   "name": "docpad-plugin-sitemap",
-  "version": "2.0.1",
+  "version": "2.2.0",
   "description": "DocPad plugin which automatically creates a sitemap.xml file from HTML file output.",
   "homepage": "https://github.com/docpad/docpad-plugin-sitemap",
+  "license": {
+    "type": "MIT"
+  },
+  "badges": {
+    "travis": true,
+    "npm": true,
+    "gittip": "docpad",
+    "flattr": "344188/balupton-on-Flattr",
+    "paypal": "QB8GQPZAH84N6"
+  },
   "keywords": [
     "docpad",
     "docpad-plugin",
@@ -11,16 +21,17 @@
     "sitemap",
     "sitemap.xml"
   ],
-  "author": "Ben Delarre <ben@delarre.net> (http://www.delarre.net)",
+  "author": "2012+ Ben Delarre <ben@delarre.net> (http://www.delarre.net)",
   "maintainers": [
     "Ben Delarre <ben@delarre.net> (http://www.delarre.net)",
     "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
   ],
   "contributors": [
-    "Khalid Jebbari <khalid.jebbari@gmail.com> (https://github.com/DjebbZ)",
     "Ben Delarre <ben@delarre.net> (https://github.com/benjamind)",
     "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)",
-    "Bruno Heridet (https://github.com/Delapouite)"
+    "Bruno Heridet (https://github.com/Delapouite)",
+    "Khalid Jebbari <khalid.jebbari@gmail.com> (https://github.com/DjebbZ)",
+    "raffomania (https://github.com/raffomania)"
   ],
   "bugs": {
     "url": "https://github.com/docpad/docpad-plugin-sitemap/issues"
@@ -38,10 +49,12 @@
   "dependencies": {
     "extendr": "~2.1.0",
     "safefs": "~3.0.3",
-    "sitemap": "~0.6.0"
+    "sitemap": "~0.7.1"
   },
   "devDependencies": {
-    "coffee-script": "1.6.3"
+    "docpad": "6",
+    "coffee-script": "1.6.3",
+    "projectz": "~0.3.0"
   },
   "main": "./out/sitemap.plugin.js",
   "scripts": {
