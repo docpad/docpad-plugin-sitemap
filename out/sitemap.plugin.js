@@ -24,7 +24,8 @@
         changefreq: 'weekly',
         priority: 0.5,
         filePath: 'sitemap.xml',
-        collectionName: 'html'
+        collectionName: 'html',
+        optimize: true
       };
 
       SitemapPlugin.prototype.writeAfter = function(opts, next) {
@@ -51,8 +52,12 @@
             data = {
               url: document.get('url'),
               changefreq: (_ref1 = document.get('changefreq')) != null ? _ref1 : sitemapData.changefreq,
-              priority: (_ref2 = document.get('priority')) != null ? _ref2 : sitemapData.priority
+              priority: (_ref2 = document.get('priority')) != null ? _ref2 : sitemapData.priority,
+              lastmod: document.get('mtime').toString()
             };
+            if (sitemapData.optimize) {
+              data.url = data.url.replace(/\/index\.html$/i, '/');
+            }
             docpad.log("debug", data);
             return sitemapData.urls.push(data);
           }
