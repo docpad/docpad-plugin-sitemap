@@ -18,6 +18,7 @@ module.exports = (BasePlugin) ->
 			priority: 0.5
 			filePath: 'sitemap.xml'
 			collectionName: 'html'
+			optimize: true
 
 
 		# --------------
@@ -58,6 +59,10 @@ module.exports = (BasePlugin) ->
 						url: document.get('url')
 						changefreq: document.get('changefreq') ? sitemapData.changefreq
 						priority: document.get('priority') ? sitemapData.priority
+						lastmod: document.get('mtime').toString()
+
+					if sitemapData.optimize
+						data.url = data.url.replace(/\/index\.html$/i, '/')
 
 					docpad.log "debug", data
 					sitemapData.urls.push data
