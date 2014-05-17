@@ -4,9 +4,13 @@
 
 [![Build Status](http://img.shields.io/travis-ci/docpad/docpad-plugin-sitemap.png?branch=master)](http://travis-ci.org/docpad/docpad-plugin-sitemap "Check this project's build status on TravisCI")
 [![NPM version](http://badge.fury.io/js/docpad-plugin-sitemap.png)](https://npmjs.org/package/docpad-plugin-sitemap "View this project on NPM")
+[![Dependency Status](https://david-dm.org/docpad/docpad-plugin-sitemap.png?theme=shields.io)](https://david-dm.org/docpad/docpad-plugin-sitemap)
+[![Development Dependency Status](https://david-dm.org/docpad/docpad-plugin-sitemap/dev-status.png?theme=shields.io)](https://david-dm.org/docpad/docpad-plugin-sitemap#info=devDependencies)<br/>
 [![Gittip donate button](http://img.shields.io/gittip/docpad.png)](https://www.gittip.com/docpad/ "Donate weekly to this project using Gittip")
 [![Flattr donate button](http://img.shields.io/flattr/donate.png?color=yellow)](http://flattr.com/thing/344188/balupton-on-Flattr "Donate monthly to this project using Flattr")
 [![PayPayl donate button](http://img.shields.io/paypal/donate.png?color=yellow)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QB8GQPZAH84N6 "Donate once-off to this project using Paypal")
+[![BitCoin donate button](http://img.shields.io/bitcoin/donate.png?color=yellow)](https://coinbase.com/checkouts/9ef59f5479eec1d97d63382c9ebcb93a "Donate once-off to this project using BitCoin")
+[![Wishlist browse button](http://img.shields.io/wishlist/browse.png?color=yellow)](http://amzn.com/w/2F8TXKSNAFG4V "Buy an item on our wishlist for us")
 
 <!-- /BADGES -->
 
@@ -95,16 +99,22 @@ No sponsors yet! Will you be the first?
 [![Gittip donate button](http://img.shields.io/gittip/docpad.png)](https://www.gittip.com/docpad/ "Donate weekly to this project using Gittip")
 [![Flattr donate button](http://img.shields.io/flattr/donate.png?color=yellow)](http://flattr.com/thing/344188/balupton-on-Flattr "Donate monthly to this project using Flattr")
 [![PayPayl donate button](http://img.shields.io/paypal/donate.png?color=yellow)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QB8GQPZAH84N6 "Donate once-off to this project using Paypal")
+[![BitCoin donate button](http://img.shields.io/bitcoin/donate.png?color=yellow)](https://coinbase.com/checkouts/9ef59f5479eec1d97d63382c9ebcb93a "Donate once-off to this project using BitCoin")
+[![Wishlist browse button](http://img.shields.io/wishlist/browse.png?color=yellow)](http://amzn.com/w/2F8TXKSNAFG4V "Buy an item on our wishlist for us")
 
 ### Contributors
 
 These amazing people have contributed code to this project:
 
-- Ben Delarre <ben@delarre.net> (https://github.com/benjamind) - [view contributions](https://github.com/docpad/docpad-plugin-sitemap/commits?author=benjamind)
-- Benjamin Lupton <b@lupton.cc> (https://github.com/balupton) - [view contributions](https://github.com/docpad/docpad-plugin-sitemap/commits?author=balupton)
-- Bruno Heridet (https://github.com/Delapouite) - [view contributions](https://github.com/docpad/docpad-plugin-sitemap/commits?author=Delapouite)
-- Khalid Jebbari <khalid.jebbari@gmail.com> (https://github.com/DjebbZ) - [view contributions](https://github.com/docpad/docpad-plugin-sitemap/commits?author=DjebbZ)
-- raffomania (https://github.com/raffomania) - [view contributions](https://github.com/docpad/docpad-plugin-sitemap/commits?author=raffomania)
+- [apoleshchuk](https://github.com/apoleshchuk) — [view contributions](https://github.com/docpad/docpad-plugin-sitemap/commits?author=apoleshchuk)
+- [Ben Delarre](https://github.com/benjamind) <ben@delarre.net> — [view contributions](https://github.com/docpad/docpad-plugin-sitemap/commits?author=benjamind)
+- [Benjamin Lupton](https://github.com/balupton) <b@lupton.cc> — [view contributions](https://github.com/docpad/docpad-plugin-sitemap/commits?author=balupton)
+- [brockfanning](https://github.com/brockfanning) — [view contributions](https://github.com/docpad/docpad-plugin-sitemap/commits?author=brockfanning)
+- [Bruno Heridet](https://github.com/Delapouite) — [view contributions](https://github.com/docpad/docpad-plugin-sitemap/commits?author=Delapouite)
+- [Khalid Jebbari](https://github.com/DjebbZ) <khalid.jebbari@gmail.com> — [view contributions](https://github.com/docpad/docpad-plugin-sitemap/commits?author=DjebbZ)
+- [nathanbowser](https://github.com/nathanbowser) — [view contributions](https://github.com/docpad/docpad-plugin-sitemap/commits?author=nathanbowser)
+- [raffomania](https://github.com/raffomania) — [view contributions](https://github.com/docpad/docpad-plugin-sitemap/commits?author=raffomania)
+- [RobLoach](https://github.com/RobLoach) — [view contributions](https://github.com/docpad/docpad-plugin-sitemap/commits?author=RobLoach)
 
 [Become a contributor!](https://github.com/docpad/docpad-plugin-sitemap/blob/master/CONTRIBUTING.md#files)
 

@@ -9,9 +9,13 @@
   "badges": {
     "travis": true,
     "npm": true,
+    "david": true,
+    "daviddev": true,
     "gittip": "docpad",
     "flattr": "344188/balupton-on-Flattr",
-    "paypal": "QB8GQPZAH84N6"
+    "paypal": "QB8GQPZAH84N6",
+    "bitcoin": "https://coinbase.com/checkouts/9ef59f5479eec1d97d63382c9ebcb93a",
+    "wishlist": "http://amzn.com/w/2F8TXKSNAFG4V"
   },
   "keywords": [
     "docpad",
@@ -27,11 +31,15 @@
     "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
   ],
   "contributors": [
+    "apoleshchuk (https://github.com/apoleshchuk)",
     "Ben Delarre <ben@delarre.net> (https://github.com/benjamind)",
     "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)",
+    "brockfanning (https://github.com/brockfanning)",
     "Bruno Heridet (https://github.com/Delapouite)",
     "Khalid Jebbari <khalid.jebbari@gmail.com> (https://github.com/DjebbZ)",
-    "raffomania (https://github.com/raffomania)"
+    "nathanbowser (https://github.com/nathanbowser)",
+    "raffomania (https://github.com/raffomania)",
+    "RobLoach (https://github.com/RobLoach)"
   ],
   "bugs": {
     "url": "https://github.com/docpad/docpad-plugin-sitemap/issues"
@@ -54,10 +62,13 @@
   "devDependencies": {
     "docpad": "6",
     "coffee-script": "1.6.3",
-    "projectz": "~0.3.0"
+    "projectz": "~0.3.13"
   },
   "main": "./out/sitemap.plugin.js",
   "scripts": {
     "test": "node ./out/sitemap.test.js"
+  },
+  "cakeConfiguration": {
+    "COFFEE_SRC_PATH": "src"
   }
 }
