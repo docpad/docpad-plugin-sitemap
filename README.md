@@ -32,10 +32,10 @@ docpad install sitemap
 
 ## Usage
 
-For each document, you can specify the following metadata :
+For each document, you can specify the following metadata:
 
 ``` coffee
-changfreq: 'always' || 'hourly' || 'daily' || 'weekly' || 'monthly' || 'yearly' || 'never' # Change frequency, defaults to 'weekly'
+changefreq: 'always' || 'hourly' || 'daily' || 'weekly' || 'monthly' || 'yearly' || 'never' # Change frequency, defaults to 'weekly'
 priority: 0.5 # value between 0.0 and 1.0, defaults to 0.5
 sitemap: true || false # defaults to true, if false no entry for this document will be generated
 ```
