@@ -19,7 +19,12 @@ module.exports = (BasePlugin) ->
 			filePath: 'sitemap.xml'
 			collectionName: 'html'
 			optimize: true
+			sortByURL: false
 
+		sortByURL: (a, b) ->
+			return -1 if a.url < b.url
+			return 1 if a.url > b.url
+			0
 
 		# --------------
 		# Docpad events
@@ -66,6 +71,9 @@ module.exports = (BasePlugin) ->
 
 					docpad.log "debug", data
 					sitemapData.urls.push data
+
+			# sort urls
+			sitemapData.urls.sort @sortByURL if sitemapData.sortByURL
 
 			# setup sitemap with our data
 			sitemap = sm.createSitemap(sitemapData);
