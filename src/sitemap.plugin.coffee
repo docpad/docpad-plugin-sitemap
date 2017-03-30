@@ -64,7 +64,7 @@ module.exports = (BasePlugin) ->
 						url: document.get('url')
 						changefreq: document.get('changefreq') ? sitemapData.changefreq
 						priority: document.get('priority') ? sitemapData.priority
-						lastmod: document.get('mtime').toString()
+						lastmodISO: document.get('mtime').toISOString().slice 0, 10
 
 					if sitemapData.optimize
 						data.url = data.url.replace(/\/index\.html$/i, '/')

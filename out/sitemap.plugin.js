@@ -63,7 +63,7 @@
               url: document.get('url'),
               changefreq: (ref = document.get('changefreq')) != null ? ref : sitemapData.changefreq,
               priority: (ref1 = document.get('priority')) != null ? ref1 : sitemapData.priority,
-              lastmod: document.get('mtime').toString()
+              lastmodISO: document.get('mtime').toISOString().slice(0, 10)
             };
             if (sitemapData.optimize) {
               data.url = data.url.replace(/\/index\.html$/i, '/');
