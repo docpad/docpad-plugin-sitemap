@@ -68,7 +68,7 @@ module.exports = (BasePlugin) ->
 					sitemapData.urls.push data
 
 			# setup sitemap with our data
-			sitemap = sm.createSitemap(sitemapData);
+			sitemap = sm.createSitemap(sitemapData)
 
 			# write the sitemap to file
 			safefs.writeFile sitemapPath, sitemap.toString(), (err) ->
