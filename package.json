@@ -93,9 +93,9 @@
   ],
   "main": "es5/sitemap.plugin.js",
   "dependencies": {
-    "extendr": "~2.1.0",
-    "safefs": "~3.0.3",
-    "sitemap": "~0.7.1"
+    "extendr": "^3.2.2",
+    "safefs": "^4.1.0",
+    "sitemap": "^1.12.0"
   },
   "devDependencies": {
     "coffee-script": "^1.12.5",
