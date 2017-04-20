@@ -1,5 +1,8 @@
 # History
 
+## v2.3.0 2017 April 20
+- Updated base files
+
 ## v2.2.0 2012 December 13
 - Added the ability to customise which collection is used
 	- Thanks to [brockfanning](https://github.com/brockfanning) for [pull request #4](https://github.com/docpad/docpad-plugin-sitemap/pull/4)
