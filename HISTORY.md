@@ -1,5 +1,9 @@
 # History
 
+## v2.5.0 2018 July 11
+- Updated base files using [boundation](https://github.com/bevry/boundation)
+- Compiled with CoffeeScript v2
+
 ## v2.4.0 2017 April 20
 - Updated dependencies
 
