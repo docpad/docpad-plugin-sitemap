@@ -7,7 +7,7 @@
 
 <!-- BADGES/ -->
 
-<span class="badge-travisci"><a href="http://travis-ci.org/docpad/docpad-plugin-sitemap" title="Check this project's build status on TravisCI"><img src="https://img.shields.io/travis/docpad/docpad-plugin-sitemap/master.svg" alt="Travis CI Build Status" /></a></span>
+<span class="badge-travisci"><a href="http://travis-ci.com/docpad/docpad-plugin-sitemap" title="Check this project's build status on TravisCI"><img src="https://img.shields.io/travis/com/docpad/docpad-plugin-sitemap/master.svg" alt="Travis CI Build Status" /></a></span>
 <span class="badge-npmversion"><a href="https://npmjs.org/package/docpad-plugin-sitemap" title="View this project on NPM"><img src="https://img.shields.io/npm/v/docpad-plugin-sitemap.svg" alt="NPM version" /></a></span>
 <span class="badge-npmdownloads"><a href="https://npmjs.org/package/docpad-plugin-sitemap" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/docpad-plugin-sitemap.svg" alt="NPM downloads" /></a></span>
 <span class="badge-daviddm"><a href="https://david-dm.org/docpad/docpad-plugin-sitemap" title="View the status of this project's dependencies on DavidDM"><img src="https://img.shields.io/david/docpad/docpad-plugin-sitemap.svg" alt="Dependency Status" /></a></span>
@@ -71,6 +71,17 @@ By default all HTML files on your site will be considered for inclusion. To spec
 ```
 
 
+
+
+
+
+
+
+
+
+
+
+
 <!-- INSTALL/ -->
 
 <h2>Install</h2>
@@ -106,7 +117,7 @@ Install this DocPad plugin by entering <code>docpad install sitemap</code> into 
 
 These amazing people are maintaining this project:
 
-<ul><li><a href="http://www.delarre.net">Ben Delarre</a></li>
+<ul><li><a href="http://www.delarre.net">Ben Delarre</a> — <a href="https://github.com/docpad/docpad-plugin-sitemap/commits?author=benjamind" title="View the GitHub contributions of Ben Delarre on repository docpad/docpad-plugin-sitemap">view contributions</a></li>
 <li><a href="https://github.com/balupton">Benjamin Lupton</a> — <a href="https://github.com/docpad/docpad-plugin-sitemap/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository docpad/docpad-plugin-sitemap">view contributions</a></li></ul>
 
 <h3>Sponsors</h3>
@@ -127,16 +138,17 @@ No sponsors yet! Will you be the first?
 
 These amazing people have contributed code to this project:
 
-<ul><li><a href="http://www.delarre.net">Ben Delarre</a></li>
-<li><a href="https://github.com/apoleshchuk">Anton Poleshchuk</a> — <a href="https://github.com/docpad/docpad-plugin-sitemap/commits?author=apoleshchuk" title="View the GitHub contributions of Anton Poleshchuk on repository docpad/docpad-plugin-sitemap">view contributions</a></li>
+<ul><li><a href="https://github.com/apoleshchuk">Anton Poleshchuk</a> — <a href="https://github.com/docpad/docpad-plugin-sitemap/commits?author=apoleshchuk" title="View the GitHub contributions of Anton Poleshchuk on repository docpad/docpad-plugin-sitemap">view contributions</a></li>
+<li><a href="http://www.delarre.net">Ben Delarre</a> — <a href="https://github.com/docpad/docpad-plugin-sitemap/commits?author=benjamind" title="View the GitHub contributions of Ben Delarre on repository docpad/docpad-plugin-sitemap">view contributions</a></li>
 <li><a href="https://github.com/balupton">Benjamin Lupton</a> — <a href="https://github.com/docpad/docpad-plugin-sitemap/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository docpad/docpad-plugin-sitemap">view contributions</a></li>
-<li><a href="https://github.com/brockfanning">brockfanning</a> — <a href="https://github.com/docpad/docpad-plugin-sitemap/commits?author=brockfanning" title="View the GitHub contributions of brockfanning on repository docpad/docpad-plugin-sitemap">view contributions</a></li>
-<li><a href="http://delapouite.com">Bruno Heridet</a></li>
+<li><a href="https://github.com/Delapouite">Bruno Heridet</a> — <a href="https://github.com/docpad/docpad-plugin-sitemap/commits?author=Delapouite" title="View the GitHub contributions of Bruno Heridet on repository docpad/docpad-plugin-sitemap">view contributions</a></li>
+<li><a href="https://github.com/phaseOne">Evan Bovie</a> — <a href="https://github.com/docpad/docpad-plugin-sitemap/commits?author=phaseOne" title="View the GitHub contributions of Evan Bovie on repository docpad/docpad-plugin-sitemap">view contributions</a></li>
 <li><a href="https://github.com/DjebbZ">Khalid Jebbari</a> — <a href="https://github.com/docpad/docpad-plugin-sitemap/commits?author=DjebbZ" title="View the GitHub contributions of Khalid Jebbari on repository docpad/docpad-plugin-sitemap">view contributions</a></li>
-<li><a href="nathanbowser.com">Nathan Bowser</a></li>
+<li><a href="https://github.com/nathanbowser">Nathan Bowser</a> — <a href="https://github.com/docpad/docpad-plugin-sitemap/commits?author=nathanbowser" title="View the GitHub contributions of Nathan Bowser on repository docpad/docpad-plugin-sitemap">view contributions</a></li>
 <li><a href="http://raffomania.github.io">Rafael Epplée</a></li>
-<li><a href="http://robloach.net">Rob Loach</a></li>
-<li><a href="http://www.mirareality.com">Evan Bovie</a></li>
+<li><a href="https://github.com/raffomania">Rafael Epplée</a> — <a href="https://github.com/docpad/docpad-plugin-sitemap/commits?author=raffomania" title="View the GitHub contributions of Rafael Epplée on repository docpad/docpad-plugin-sitemap">view contributions</a></li>
+<li><a href="https://github.com/RobLoach">Rob Loach</a> — <a href="https://github.com/docpad/docpad-plugin-sitemap/commits?author=RobLoach" title="View the GitHub contributions of Rob Loach on repository docpad/docpad-plugin-sitemap">view contributions</a></li>
+<li><a href="https://github.com/brockfanning">brockfanning</a> — <a href="https://github.com/docpad/docpad-plugin-sitemap/commits?author=brockfanning" title="View the GitHub contributions of brockfanning on repository docpad/docpad-plugin-sitemap">view contributions</a></li>
 <li><a href="https://github.com/vsopvsop">vsopvsop</a> — <a href="https://github.com/docpad/docpad-plugin-sitemap/commits?author=vsopvsop" title="View the GitHub contributions of vsopvsop on repository docpad/docpad-plugin-sitemap">view contributions</a></li></ul>
 
 <a href="https://github.com/docpad/docpad-plugin-sitemap/blob/master/CONTRIBUTING.md#files">Discover how you can contribute by heading on over to the <code>CONTRIBUTING.md</code> file.</a>

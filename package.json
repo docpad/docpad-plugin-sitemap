@@ -43,6 +43,7 @@
       "patreonUsername": "bevry",
       "paypalURL": "https://bevry.me/paypal",
       "wishlistURL": "https://bevry.me/wishlist",
+      "travisTLD": "com",
       "githubUsername": "docpad",
       "githubRepository": "docpad-plugin-sitemap",
       "githubSlug": "docpad/docpad-plugin-sitemap",
@@ -52,20 +53,21 @@
   "funding": "https://bevry.me/fund",
   "author": "2012+ Ben Delarre <ben@delarre.net> (http://www.delarre.net)",
   "maintainers": [
-    "Ben Delarre <ben@delarre.net> (http://www.delarre.net)",
+    "Ben Delarre <ben@delarre.net> (https://github.com/benjamind)",
     "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
   ],
   "contributors": [
-    "Ben Delarre <ben@delarre.net> (http://www.delarre.net)",
     "Anton Poleshchuk <anton@poleshchuk.com> (https://github.com/apoleshchuk)",
+    "Ben Delarre <ben@delarre.net> (https://github.com/benjamind)",
     "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)",
-    "brockfanning (https://github.com/brockfanning)",
-    "Bruno Heridet <delapouite@gmail.com> (http://delapouite.com)",
+    "Bruno Heridet <delapouite@gmail.com> (https://github.com/Delapouite)",
+    "Evan Bovie <evan@bovie.me> (https://github.com/phaseOne)",
     "Khalid Jebbari <khalid.jebbari@gmail.com> (https://github.com/DjebbZ)",
-    "Nathan Bowser <nbowser@gmail.com> (nathanbowser.com)",
+    "Nathan Bowser <nbowser@gmail.com> (https://github.com/nathanbowser)",
     "Rafael Epplée (http://raffomania.github.io)",
-    "Rob Loach <robloach@gmail.com> (http://robloach.net)",
-    "Evan Bovie <evan@bovie.me> (http://www.mirareality.com)",
+    "Rafael Epplée (https://github.com/raffomania)",
+    "Rob Loach <robloach@gmail.com> (https://github.com/RobLoach)",
+    "brockfanning (https://github.com/brockfanning)",
     "vsopvsop (https://github.com/vsopvsop)"
   ],
   "bugs": {
@@ -99,7 +101,7 @@
         "require"
       ],
       "engines": {
-        "node": true
+        "node": "10 || 12 || 13 || 14"
       }
     }
   ],
@@ -109,16 +111,16 @@
     "docpad-baseplugin": "^1.4.0",
     "extendr": "^5.13.0",
     "safefs": "^6.11.0",
-    "sitemap": "^1.12.0"
+    "sitemap": "1.13.0"
   },
   "devDependencies": {
     "@bevry/update-contributors": "^1.15.0",
     "coffeelint": "^2.1.0",
     "coffeescript": "^2.5.1",
     "docpad": "^6.83.1",
-    "docpad-plugintester": "^1.6.2",
+    "docpad-plugintester": "^1.7.2",
     "projectz": "^2.13.0",
-    "valid-directory": "^2.8.0"
+    "valid-directory": "^3.0.0"
   },
   "scripts": {
     "our:clean": "rm -Rf ./docs ./edition* ./es2015 ./es5 ./out ./.next",
@@ -141,5 +143,10 @@
     "our:verify:coffeelint": "coffeelint ./source",
     "our:verify:directory": "valid-directory",
     "test": "docpad-plugintester"
+  },
+  "boundation": {
+    "versions": {
+      "sitemap": "1"
+    }
   }
 }
