@@ -111,7 +111,7 @@
     "docpad-baseplugin": "^1.4.0",
     "extendr": "^5.13.0",
     "safefs": "^6.11.0",
-    "sitemap": "1.13.0"
+    "sitemap": "6.2.0"
   },
   "devDependencies": {
     "@bevry/update-contributors": "^1.15.0",
