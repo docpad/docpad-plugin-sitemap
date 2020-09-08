@@ -82,6 +82,15 @@ By default all HTML files on your site will be considered for inclusion. To spec
 
 
 
+
+
+
+
+
+
+
+
+
 <!-- INSTALL/ -->
 
 <h2>Install</h2>
