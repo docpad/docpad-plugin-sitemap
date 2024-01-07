@@ -112,7 +112,7 @@
   "main": "edition-esnext/index.js",
   "dependencies": {
     "docpad-baseplugin": "^1.4.0",
-    "extendr": "^5.15.0",
+    "extendr": "^7.10.0",
     "safefs": "^6.13.0",
     "sitemap": "1.13.0"
   },
